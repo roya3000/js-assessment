@@ -78,6 +78,10 @@ exports.arraysAnswers = {
   duplicates : function(arr) {
     var result = [];
 
+    arr.sort(function (a, b) {
+      return a - b;
+    });
+
     for (var i = 1; i < arr.length; i++) {
       if (arr[i-1] === arr[i] && result.indexOf(arr[i]) === -1) {
         result.push(arr[i]);
